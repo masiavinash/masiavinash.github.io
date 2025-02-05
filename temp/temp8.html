@@ -7,7 +7,11 @@
     <script>
         function showData(){
             //alert("Hello World")
-            data.innerHTML="Avinash"
+            let name = document.getElementById("name").value
+            let email = document.getElementById("email").value
+            let password = document.getElementById("password").value
+            let dob = document.getElementById("dob").value
+            data.innerHTML= name + " / " + email + " / " + password + " / " + dob
         }
     </script>
   </head>
@@ -16,7 +20,7 @@
     <p><input type="text" id="name" placeholder="Enter Name" /></p>
     <p><input type="text" id="email" placeholder="Enter Email Address" /></p>
     <p><input type="password" id="password" placeholder="Enter Password" /></p>
-    <p><input type="datetime-local" id="dob" /></p>
+    <p><input type="date" id="dob" /></p>
     <button onclick="showData()">Register</button>
     <hr />
     <div id="data"></div>
