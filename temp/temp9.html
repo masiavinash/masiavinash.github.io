@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showData(){
+            //alert("Hello World")
+            let email = document.getElementById("email").value
+            let password = document.getElementById("password").value
+            data.innerHTML= `${email} , ${password}`
+            if(email=="avi@gmail.com" && password =="1234"){
+                data.innerHTML = "Welcome Avi"
+            }
+            else {
+                data.innerHTML = 'Access Denied'
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1> Login Form</h1>
+    <p><input type="text" id="email" placeholder="Email Adresss"></p>
+    <p><input type="password" id="password" placeholder="Email password"></p>
+    <button onclick="showData()">Log In</button>
+</body>
+</html>
