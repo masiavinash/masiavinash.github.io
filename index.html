@@ -5,154 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Name</title>
     <link rel="icon" type="image/x-icon" href="assets/images/ball.png" />
-    <style>
-      /* Reset some default styles */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        background-color: #f4f4f4;
-        color: #333;
-      }
-
-      .container {
-        width: 80%;
-        margin: 0 auto;
-      }
-
-      /* Header styles */
-      .header-row {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px 0;
-        background-color: #333;
-      }
-
-      .header-row .box h1 {
-        color: white;
-      }
-
-      .header-row .box ul {
-        list-style-type: none;
-      }
-
-      .header-row .box ul li {
-        display: inline;
-        margin: 0 15px;
-      }
-
-      .header-row .box ul li a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-
-      .header-row .box ul li a:hover {
-        color: #ddd;
-      }
-
-      /* Main content row */
-      .row {
-        padding: 40px 0;
-      }
-
-      .row h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-      }
-
-      .row h3 {
-        font-size: 1.5rem;
-      }
-
-      .row p {
-        margin-bottom: 20px;
-        font-size: 1rem;
-        line-height: 1.6;
-      }
-
-      /* Flexbox for layout */
-      .box {
-        flex: 1;
-        margin: 0 15px;
-      }
-
-      .row div {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      /* Button Styles */
-      button {
-        background-color: #333;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-size: 1rem;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-
-      button:hover {
-        background-color: #555;
-      }
-
-      /* Section background colors */
-      #projects {
-        background-color: lightcoral;
-      }
-
-      #services {
-        background-color: lightblue;
-      }
-
-      #contact {
-        background-color: lightgoldenrodyellow;
-      }
-
-      /* Contact Form Styling */
-      input[type="text"], input[type="email"], textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border-radius: 5px;
-        border: 1px solid #ddd;
-      }
-
-      textarea {
-        resize: vertical;
-      }
-
-      /* Footer styles */
-      .footer {
-        text-align: center;
-        padding: 20px;
-        background-color: #333;
-        color: white;
-        font-size: 1rem;
-      }
-
-      .footer a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      .footer a:hover {
-        text-decoration: underline;
-      }
-    </style>
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
     <div class="container">
-      <div class="header-row">
+      <div class="header-row"> 
         <div class="box"><h1>Your Name</h1></div>
         <div class="box">
           <ul>
@@ -160,13 +17,14 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#about">About</a></li>
+
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
 
       <div class="row" id="home">
-        <div style="display: flex; padding-top: 50px;">
+        <div style="display: flex;padding-top: 50px;">
           <div class="box">
             <h1>Full Stack Developer</h1>
             <p>
@@ -182,17 +40,17 @@
               perferendis assumenda?
             </p>
             <button>Button 1</button>
-            <button>Button 2</button>
+            <button>Button 1</button>
           </div>
           <div class="box">
-            <img src="https://picsum.photos/id/2/400/400" alt="Image"/>
+            <img src="https://picsum.photos/id/2/400/400" />
           </div>
         </div>
       </div>
 
-      <div id="projects" class="row">
+      <div id="projects" class="row" style="background-color: lightcoral">
         <h1>Projects</h1>
-        <div style="display: flex;">
+        <div style="display: flex">
           <div class="box">
             <h3>Project 1</h3>
             <p>
@@ -224,10 +82,9 @@
           </div>
         </div>
       </div>
-
-      <div id="services" class="row">
+      <div id="services" class="row" style="background-color: lightblue">
         <h1>Services</h1>
-        <div style="display: flex;">
+        <div style="display: flex">
           <div class="box">
             <h3>Web App Development</h3>
             <p>
@@ -259,7 +116,6 @@
           </div>
         </div>
       </div>
-
       <div id="about" class="row">
         <h1>About</h1>
         <h3>
@@ -272,10 +128,15 @@
         <h3>Java, Python, Reactjs</h3>
         <p>Display the logo of all the technologies you know.</p>
       </div>
-
-      <div id="contact" class="row">
+      <div
+        id="contact"
+        class="row"
+        style="background-color: lightgoldenrodyellow"
+      >
         <h1>Contact</h1>
-        <div style="display: flex;">
+        <div style="display: flex">
+         
+
           <div class="box">
             <h3>Contact Form</h3>
             <p>
@@ -307,7 +168,6 @@
           </div>
         </div>
       </div>
-
       <div class="footer">@copyright 2024. All rights reserved.</div>
     </div>
   </body>
