@@ -6,7 +6,7 @@
   }
   .header {
       padding: 10px;
-      background-color:pink;
+      background-color:lightgoldenrodyellow;
       display: flex;
       justify-content: space-between;
   }
@@ -18,13 +18,13 @@
       justify-content: center;
   }
   .box {
-      background-color: white;
+      background-color: lightskyblue;
       margin: 10px;
       border-radius: 20px;
       padding: 10px;
   }
   .cartBlock {
-      background-color: silver;
+      background-color: grey;
       width: 300px;
       position: fixed;
       top:0px;
