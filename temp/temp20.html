@@ -1,29 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>temp20</title>
     <script>
-      const products = [
-        { id: 1, name: "P1", price: 34 },
-        { id: 2, name: "P2", price: 50 },
-        { id: 3, name: "P3", price: 40 },
-      ];
-      const showProducts = () => {
-        let str = ""
-        products.map((value) => {
-           str += `<div>${value.id}-${value.name}-${value.price}-<button>Add to Cart</button></div>`
-        });
-        divProducts.innerHTML = str
-      };
+        const products =[
+            {id:1,name:"P1",price:34},
+            {id:2,name:"P2",price:45},
+            {id:3,name:"P3",price:56},
+        ]
+        const showProducts = () => {
+            let divProducts = document.getElementById('divProducts');
+            let str=""
+            products.forEach((product) => {
+                str += `
+                <div>
+                    Product ID: ${product.id},
+                    Product Name: ${product.name},
+                    Product Price: ${product.price}
+                    <button onclick='addCart(${product.id})'>Add to Cart</button>
+                </div>
+                `
+                divProducts.innerHTML = str;
+            });
+        };
+        const cart = {}
+        const addCart = (id) => {
+            if(cart[id]){
+                cart[id] += 1;
+            }else{
+                cart[id] = 1;
+            }
+            showCart();
+        };
+        const showCart = () => {
+            let divCart = document.getElementById('divCart');
+            let str = "";
+            for (const key in cart) {
+                str += `
+                <div>
+                    Product ID: ${key},
+                    Quantity: ${cart[key]}
+                </div>
+                `
+            }
+            divCart.innerHTML = str;
+        };
     </script>
-  </head>
-  <body onload="showProducts()">
+</head>
+<body onload="showProducts()">
     <h1>My Store</h1>
-    <hr />
+    <hr>
     <h3>Products</h3>
     <div id="divProducts"></div>
+    <hr>
     <h3>My Cart</h3>
-  </body>
+    <div id="divCart"></div>
+</body>
 </html>
