@@ -1,35 +1,55 @@
-*{
-    margin: 0;  
-  }
-  .container {
-      margin: 0;
-  }
-  .header {
-      padding: 10px;
-      background-color:lightgoldenrodyellow;
-      display: flex;
-      justify-content: space-between;
-  }
-  .productBlock{
-      background-color: silver;
-  }
-  .row {
-      display: flex;
-      justify-content: center;
-  }
-  .box {
-      background-color: lightskyblue;
-      margin: 10px;
-      border-radius: 20px;
-      padding: 10px;
-  }
-  .cartBlock {
-      background-color: grey;
-      width: 300px;
-      position: fixed;
-      top:0px;
-      left:100%;
-      height: 100%;
-      padding: 20px;
-      transition: 2s;
-  }
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+.row{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 300px;
+    border: 1px solid red;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.row button{
+    background-color: rgb(99, 6, 125);
+    font-size: 20px;
+    color: pink;box-shadow: 2px 2px 4px (0, 0, 163, 0.991);
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+}
+h1 {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: blue;
+    color: lightblue;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px (0, 0, 0, 0.1);
+    text-shadow: 3px 3px 2px (0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    line-height: 1.5;
+}
+
+#cartButton{
+    background-color: red;
+    color: lightcoral;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
