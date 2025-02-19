@@ -19,7 +19,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: #007bff;
+  background: grey;
   color: white;
   position: sticky;
   top: 0;
@@ -53,7 +53,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(to right, lightblue, grey);
   color: black;
   padding: 100px 20px;
 }
@@ -83,7 +83,7 @@ body {
 #projects h1 {
   text-align: center;
   margin-bottom: 30px;
-  color: #007bff;
+  color: grey;
 }
 
 .box {
@@ -108,7 +108,7 @@ body {
 #services h1 {
   text-align: center;
   margin-bottom: 30px;
-  color: #007bff;
+  color: grey;
 }
 
 /* About Section */
@@ -118,7 +118,7 @@ body {
 
 #about h1 {
   text-align: center;
-  color: #007bff;
+  color: grey;
 }
 
 #about h2 {
@@ -140,7 +140,7 @@ body {
 #contact h1 {
   text-align: center;
   margin-bottom: 30px;
-  color: #007bff;
+  color: grey;
 }
 
 input, textarea {
@@ -152,7 +152,7 @@ input, textarea {
 }
 
 button {
-  background: #007bff;
+  background: grey;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -162,14 +162,14 @@ button {
 }
 
 button:hover {
-  background: #0056b3;
+  background: grey;
 }
 
 /* Footer */
 .footer {
   text-align: center;
   padding: 20px;
-  background: #007bff;
+  background: grey;
   color: white;
   margin-top: 20px;
 }
