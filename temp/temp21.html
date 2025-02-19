@@ -88,21 +88,32 @@
           <div class="caption">It's quick and easy.</div>
         </div>
       </div>
-      <hr>
-    <div id="root"></div>
+      <hr />
+      <div id="root"></div>
     </div>
     <script>
       const showData = () => {
         let firstname = document.getElementById("firstname").value;
         let surname = document.getElementById("surname").value;
+        let email = document.getElementById("email").value
+        let password = document.getElementById("password").value
+        let gender = document.getElementsByName("gender");
+        let pronoun = document.getElementById("prSelect").value
+        let day =  document.getElementById("day").value
+        let month =  document.getElementById("month").value
+        let year =  document.getElementById("year").value
+        let dob = `${day}-${month}-${year}`
         let g = "";
-        if (gender[0].checked) g = "Male";
-        if (gender[1].checked) g = "female";
-        if (gender[2].checked) g = "NA";
+        if (gender[0].checked) g = "Female";
+        if (gender[1].checked) g = "Male";
+        if (gender[2].checked) g = pronoun;
         let str = `
         <div>
           <p>Name:${firstname} ${surname}</p>
-            <p>Gender:${g}</p> 
+          <p>Email:${email}</p>
+          <p>Password:${password}</p>
+          <p>Gender:${g}</p>
+          <p>Date of Birth:${dob}</p>
         </div>
         `;
         root.innerHTML = str;
@@ -144,25 +155,25 @@
           <div><input type="radio" name="gender" onclick="togglePronoun()" /></div>
         </div>
         <div class="radioClass">
-          <div><label> Custom</label></div>
+          <div><label> Other</label></div>
           <div><input type="radio" name="gender" onclick="togglePronoun()" /></div>
         </div>
       </div>
 
      <div class="row">
       <select id="prSelect" style="display:none">
-        <option>Select your pronoun</option>
-        <option>She:"Wish her a happy birthday"</option>
-        <option>He:"Wish him a happy birthday"</option>
-        <option>They:"Wish them a happy birthday"</option>
+        <option value="NA">Select your pronoun</option>
+        <option value="She">She:"Wish her a happy birthday"</option>
+        <option value="He">He:"Wish him a happy birthday"</option>
+        <option value="They">They:"Wish them a happy birthday"</option>
       </select>
      </div>
 
       <div class="row">
-        <input type="text" placeholder="Mobile number or email address" />
+        <input type="text" id="email" placeholder="Mobule number or email address" />
       </div>
       <div class="row">
-        <input type="password" placeholder="New password" />
+        <input type="password" id="password" placeholder="New password" />
       </div>
       <div class="row">
         <button onclick='showData()'>Sign Up</button>
@@ -173,17 +184,17 @@
 
       showForm();
       let str = "";
-      for (let i = 1; i <= 31; i++) {
+      for (let i = 0; i <= 31; i++) {
         str += `<option>${i}</option>`;
       }
       day.innerHTML = str;
       str = "";
-      for (let i = 1; i <= 12; i++) {
+      for (let i = 0; i <= 12; i++) {
         str += `<option>${i}</option>`;
       }
       month.innerHTML = str;
       str = "";
-      for (let i = 1905; i <= 2025; i++) {
+      for (let i = 1990; i <= 2025; i++) {
         str += `<option>${i}</option>`;
       }
       year.innerHTML = str;
